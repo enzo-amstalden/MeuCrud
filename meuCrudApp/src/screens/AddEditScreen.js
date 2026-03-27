@@ -23,8 +23,7 @@ export default function AddEditScreen({ route, navigation }) {
         }
         navigation.goBack();
     }
-}
-return (
+    return (
     <View style={styles.container}>
 
         <TextInput
@@ -54,4 +53,6 @@ return (
         />
 
     </View>
-);
+    );
+}
+

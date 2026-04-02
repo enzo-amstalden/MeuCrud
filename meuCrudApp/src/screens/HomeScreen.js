@@ -53,7 +53,11 @@ function CardPersonal({item, navigation, refresh}){
                 </Text>
 
                 <Text style={styles.email}>
-                    {item.email}
+                    {item.email} {"\n"}
+                </Text>
+
+                <Text style={styles.phone}>
+                    {item.phone}
                 </Text>
             </View>
             <View>

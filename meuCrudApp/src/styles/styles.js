@@ -31,6 +31,10 @@ export default StyleSheet.create({
         fontSize: 10,
     },
 
+    phone:{
+        fontSize: 12,
+    },
+
     button:{
         padding: 10,
         backgroundColor: '#4caf50',

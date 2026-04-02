@@ -49,7 +49,7 @@ function CardPersonal({item, navigation, refresh}){
         <View style={styles.card}>
             <View>
                 <Text>
-                    {item.firstName} {item.lastName} {"\n"}
+                    {item.firstname} {item.lastname} {"\n"}
                 </Text>
 
                 <Text style={styles.email}>
@@ -71,5 +71,5 @@ function CardPersonal({item, navigation, refresh}){
             </View>
         </View>
 
-    )
+    );
 }

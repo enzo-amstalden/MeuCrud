@@ -9,12 +9,12 @@ export default function AddEditScreen({ route, navigation }) {
 
     const person = route.params?.person;
 
-    const [firstName, setFirstName] = useState(person?.firstName || "");
-    const [lastName, setLastName] = useState(person?.lastName || "");
+    const [firstname, setFirstName] = useState(person?.firstName || "");
+    const [lastname, setLastName] = useState(person?.lastName || "");
     const [email, setEmail] = useState(person?.email || "");
 
     async function save() {
-        const data = { firstName, lastName, email };
+        const data = { firstname, lastname, email };
 
         if (person) {
             await updatePerson(person.id, data);
@@ -23,35 +23,36 @@ export default function AddEditScreen({ route, navigation }) {
         }
         navigation.goBack();
     }
+    return (
+        <View style={styles.container}>
+    
+            <TextInput
+                placeholder="First Name"
+                value={firstname}
+                onChangeText={setFirstName}
+            />
+            <TextInput
+                placeholder="Last Name"
+                value={lastname}
+                onChangeText={setLastName}
+            />
+            <TextInput
+                placeholder="Email"
+                value={email}
+                onChangeText={setEmail}
+            />
+            
+            <Button
+                title="Save"
+                onPress={save}
+            />
+    
+            <Button
+                title="Cancelar"
+                onPress={() => navigation.goBack()}
+            />
+    
+        </View>
+    );
+    
 }
-return (
-    <View style={styles.container}>
-
-        <TextInput
-            placeholder="First Name"
-            value={firstName}
-            onChangeText={setFirstName}
-        />
-        <TextInput
-            placeholder="Last Name"
-            value={lastName}
-            onChangeText={setLastName}
-        />
-        <TextInput
-            placeholder="Email"
-            value={email}
-            onChangeText={setEmail}
-        />
-        
-        <Button
-            title="Save"
-            onPress={save}
-        />
-
-        <Button
-            title="Cancelar"
-            onPress={() => navigation.goBack()}
-        />
-
-    </View>
-);

@@ -80,6 +80,7 @@ Endpoints disponíveis:
   "email": "joao@email.com",
   "phone": "(11) 91234-5678"
 }
+```
 
 # ⚙ Como Rodar o Projeto
 
